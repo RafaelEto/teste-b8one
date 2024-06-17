@@ -6,7 +6,7 @@
       "listPrice": 2513.99,
       "sellingPrice": 2299.00,
       "parcelamento": [10, 229.90],
-      "image": "src/assets/productImage.png"
+      "image": "/assets/productImage.png"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "listPrice": 2813.99,
       "sellingPrice": 2599.00,
       "parcelamento": [10, 259.90],
-      "image": "src/assets/productImage.png"
+      "image": "/assets/productImage.png"
     }
   ]
 }
