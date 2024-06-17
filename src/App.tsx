@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { IProduct } from "./typings/IProduct"
 import Product from "./components/Product"
 import React from 'react';
+import productsData from './data/products.json';
 
 function App() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -9,9 +10,7 @@ function App() {
   const [cart, setCart] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    fetch('/products.json')
-      .then(response => response.json())
-      .then(data => setProducts(data.products));
+    setProducts(productsData.products)
   }, []);
 
   function addToWishlist(id: string) {
