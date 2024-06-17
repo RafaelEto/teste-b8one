@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #E9EBEE;
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 1332px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.shelf {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.product {
+  max-width: 304px;
+  border-radius: 8px;
+  border: none;
+  margin: 0 12px;
+  background-color: #fff;
+  padding: 32px;
+  transition: all .3s;
+}
+
+.product:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+.product__header {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.product__wishlist {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #F2F3F6;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.product__wishlist svg {
+  fill: #F2F3F6;
+  stroke: #1C1C1C;
+  transition: all .3s;
+}
+
+.product__wishlist:hover {
+  background: #FEE5EC;
+}
+
+.product__wishlist:hover svg {
+  fill: #FEE5EC;
+  stroke: #DA4B4F;
+}
+
+.product__wishlist.active {
+  background: #DA4B4F;
+}
+
+.product__wishlist.active svg {
+  fill: #FFFFFF;
+  stroke: #DA4B4F;
+}
+
+.product__image {
+  display: block;
+}
+
+.product__name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #1C1C1C;
+  margin-bottom: 24px;
+}
+
+.product__price {
+  text-align: left;
+  letter-spacing: -0.5px;
+  margin-bottom: 32px;
+}
+
+.product__price--list {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #B5B5B6;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.product__price--sell {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #DA4B4F;
+  margin-bottom: 4px;
+}
+
+.product__price--installments {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #1C1C1C;
+}
+
+.product__buybutton {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background: #40B25C;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.product__buybutton:hover {
+  background: #1C6C3E;
+}
+
+.product__buybutton.active {
+  background: #A3F9B9;
+  color: #1C1C1C;
+}
+
+.product__buybutton svg {
+  margin-right: 16px;
+}
+
+@media (max-width: 991px) {
+  .shelf {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    margin: 12px 0;
+  }
+}
